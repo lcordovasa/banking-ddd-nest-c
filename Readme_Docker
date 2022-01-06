@@ -1,6 +1,20 @@
 -- mysql://sql10463155:xUfDjch9iN@sql10.freemysqlhosting.net:3306/sql10463155
+-- Antes de eso.
+A. Crear bd en la nube
+https://www.freemysqlhosting.net/
 
-Dentro de la carpeta src hay un archivo main, cambiar el puerto para desplegar docker
+B. obetner todas las credenciales
+mysql://sql10463155:xUfDjch9iN@sql10.freemysqlhosting.net:3306/sql10463155
+
+C. cambiar la configuracion del archivo ormconfig. a la base de datos
+url: 'mysql://sql10463155:xUfDjch9iN@sql10.freemysqlhosting.net:3306/sql10463155',
+
+D. Cambiar el nombre de la base de datos banking-ddd-nest con el nombre de la base de datos de la nube sql10463155
+
+F. Dentro de la carpeta src hay un archivo main, cambiar el puerto para desplegar docker
+
+E. TENER EL CLARO EL NOMBRE DE TU APLICACION QUE ESTA EN EL ARCHIVO Dockerfile, en este ejemplo se llama app_banking_ddd_nest.
+
 
 0.  para compilar nuevamente 
     npm -i
@@ -10,7 +24,7 @@ configuracion de mysql en la nube
 mysql://sql10463155:xUfDjch9iN@sql10.freemysqlhosting.net:3306/sql10463155
 
 1. sudo docker build -t app_banking_ddd_nest . (esto es del archivo dockerfile)
-2. sudo docker run -p 8881:3001 app_banking_ddd_nest (puerto de localhost:puerto del main)
+2. sudo docker run -p 8881:3001 app_banking_ddd_nest (puerto de localhost:puerto del main de la carpeta src)
 
 ---------------------------------------------------
 publicar en azure
